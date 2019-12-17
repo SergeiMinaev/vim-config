@@ -1,3 +1,5 @@
+Homepage of this vim config: https://github.com/SergeiMinaev/vim-config
+
 Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 
 ## Fresh install:
