@@ -1,6 +1,6 @@
 Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 
-Fresh install:
+## Fresh install:
 1) Remove or backup existing ~/.vim dir and ~/.vimrc file.
 2) Install new vim config with these three commands:
 ```
@@ -13,7 +13,7 @@ mv .vimrc ~/
 Done
 
 
-Updating:
+## Updating:
 
 To update vim-config run:
 ```
@@ -22,10 +22,9 @@ git pull
 mv .vimrc ~/
 ```
 To update plugin manager run ~/.vim/update-vim-plug.sh
-
 To update installed plugins run vim and type :PlugUpdate
 
 
-Details:
+## Details:
 
 Installed plugins are stored in ~/.vim/plugged/
