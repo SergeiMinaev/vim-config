@@ -22,6 +22,7 @@ git pull
 mv .vimrc ~/
 ```
 To update plugin manager run ~/.vim/update-vim-plug.sh
+
 To update installed plugins run vim and type :PlugUpdate
 
 
