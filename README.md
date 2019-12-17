@@ -15,7 +15,8 @@ mv .vimrc ~/
 Done
 
 
-## Updating (warning: your ~/.vim and ~/.vimrc will be overwritten)
+## Updating
+### Warning: your ~/.vim and ~/.vimrc will be overwritten)
 
 To update vim-config run:
 ```
