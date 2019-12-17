@@ -20,7 +20,7 @@ Done
 To update vim-config run:
 ```
 cd ~/.vim
-git pull
+git checkout . && git pull
 mv .vimrc ~/
 ```
 To update plugin manager run ~/.vim/update-vim-plug.sh
