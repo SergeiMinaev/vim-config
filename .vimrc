@@ -32,6 +32,10 @@ set wildignore+=*/tmp*/,*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/
 Plug 'Yggdroot/indentLine'
 let g:indentLine_enabled = 1
 
+" Zig lang syntax
+Plug 'ziglang/zig.vim'
+let g:zig_fmt_autosave = 0
+
 " Initialize plugin system
 call plug#end()
 
