@@ -14,6 +14,10 @@ Plug 'jelera/vim-javascript-syntax'
 Plug 'othree/javascript-libraries-syntax.vim'
 let g:used_javascript_libs = 'vue'
 
+Plug 'posva/vim-vue'
+let g:vue_pre_processors = ['scss', 'typescript']
+" Available pre-processors are: coffee, haml, handlebars, less, pug, sass, scss, slm, stylus, typescript
+
 " Awesome vim sessions ( https://github.com/mhinz/vim-startify )
 " Save new session - :SS <session-name> 
 " Save and close existing session - :SC
