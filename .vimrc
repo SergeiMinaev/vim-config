@@ -97,6 +97,8 @@ map gd :bd<cr>
 nnoremap <C-n> <C-w><C-w>
 nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 
+" fix backspace in ssh sessions
+:set backspace=indent,eol,start
 
 " Handle commands in russian ЙЦУКЕН keyboard layout. Remove it if not needed.
 map Жцй :wq
