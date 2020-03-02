@@ -40,6 +40,10 @@ let g:indentLine_enabled = 1
 Plug 'ziglang/zig.vim'
 let g:zig_fmt_autosave = 0
 
+" Auto-delete .swp files
+Plug 'gioele/vim-autoswap'
+set title titlestring=
+
 " Initialize plugin system
 call plug#end()
 
