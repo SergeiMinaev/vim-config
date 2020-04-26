@@ -44,6 +44,9 @@ let g:zig_fmt_autosave = 0
 Plug 'gioele/vim-autoswap'
 set title titlestring=
 
+Plug 'vim-scripts/nginx.vim'
+au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
+
 " Initialize plugin system
 call plug#end()
 
