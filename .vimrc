@@ -30,7 +30,8 @@ Plug 'ap/vim-css-color'
 
 " Useful file opener (call it by Ctrl-p)
 Plug 'ctrlpvim/ctrlp.vim'
-set wildignore+=*/tmp*/,*/node_modules/*,_site,*/__pycache__/,*/venv/*,*/target/*,*/.vim$,\~$,*/.log
+set wildignore+=*/tmp*/,*/cache/*,*/CACHE/*,*/node_modules/*,*/venv/*,*/target/*,
+set wildignore+=*/static/*,*.git/*,*.log,*.jpg,*.jpeg,*.png,*.pdf,*.octet-stream,_*,
 
 " Vertical indent line
 Plug 'Yggdroot/indentLine'
