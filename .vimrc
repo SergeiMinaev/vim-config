@@ -51,6 +51,17 @@ au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfil
 " Initialize plugin system
 call plug#end()
 
+function! MyHighlights() abort
+  " Colors of matching brackets in 'apprentice' colorscheme
+  " are too low. Make them more visible.
+  highlight MatchParen cterm=bold ctermfg=235 ctermbg=253
+endfunction
+
+augroup MyColors
+    autocmd!
+    autocmd ColorScheme * call MyHighlights()
+augroup END
+colorscheme apprentice
 
 set nocompatible
 set foldcolumn=1
@@ -72,9 +83,8 @@ filetype on
 filetype plugin on
 autocmd BufRead *.py nmap <F9> :!python %<CR>
 autocmd BufRead,BufNewFile *.tpl set filetype=html
-colorscheme apprentice
-let b:showSpaces = 1
 
+let b:showSpaces = 1
 set tabstop=2 shiftwidth=2
 set expandtab
 set smarttab
