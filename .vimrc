@@ -32,6 +32,8 @@ Plug 'ap/vim-css-color'
 
 " Useful file opener (call it by Ctrl-p)
 Plug 'ctrlpvim/ctrlp.vim'
+" Don't index parent dir
+let g:ctrlp_working_path_mode = '0'
 set wildignore+=*/tmp*/,*/cache/*,*/CACHE/*,*/node_modules/*,*/venv/*,*/target/*,
 set wildignore+=*/static/*,*.git/*,*.log,*.jpg,*.jpeg,*.png,*.pdf,*.octet-stream,_*,
 
