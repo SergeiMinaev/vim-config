@@ -102,7 +102,7 @@ nmap ,t :tabnew .<CR>
 " Speed up vim a bit
 set lazyredraw
 set ttyfast
-set synmaxcol=200
+set synmaxcol=300
 set nocursorline
 
 set statusline=%F%m%r%h%w
