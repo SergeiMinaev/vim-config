@@ -36,6 +36,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_working_path_mode = '0'
 set wildignore+=*/tmp*/,*/cache/*,*/CACHE/*,*/node_modules/*,*/venv/*,*/target/*,
 set wildignore+=*/static/*,*.git/*,*.log,*.jpg,*.jpeg,*.png,*.pdf,*.octet-stream,_*,
+set wildignore+=*/migrations/*,
 
 " Vertical indent line
 Plug 'Yggdroot/indentLine'
