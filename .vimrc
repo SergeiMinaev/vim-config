@@ -116,6 +116,7 @@ set linebreak
 set t_Co=256
 set nu
 set background=dark
+set termguicolors
 set ruler
 set hlsearch
 set foldmethod=expr
