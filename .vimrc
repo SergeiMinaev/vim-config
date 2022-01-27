@@ -2,10 +2,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'posva/vim-vue'
-let g:vue_pre_processors = ['scss', 'typescript']
-" Available pre-processors are: coffee, haml, handlebars, less, pug, sass, scss, slm, stylus, typescript
-
 " Awesome vim sessions ( https://github.com/mhinz/vim-startify )
 " Save new session - :SS <session-name> 
 " Save and close existing session - :SC
