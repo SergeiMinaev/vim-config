@@ -58,6 +58,39 @@ set title titlestring=
 Plug 'vim-scripts/nginx.vim'
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
+" Colorschemes
+Plug 'tyrannicaltoucan/vim-deep-space'
+Plug 'altercation/vim-colors-solarized'
+Plug 'gregsexton/Atom'
+Plug 'ajmwagar/vim-deus'
+Plug 'chase/focuspoint-vim'
+Plug 'jaredgorski/fogbell.vim'
+Plug 'cocopon/iceberg.vim'
+Plug 'christophermca/meta5'
+Plug 'arcticicestudio/nord-vim'
+Plug 'mhartington/oceanic-next'
+Plug 'rakr/vim-one'
+Plug 'fcpg/vim-orbital'
+Plug 'sts10/vim-pink-moon'
+Plug 'kyoz/purify'
+Plug 'AlessandroYorba/Sierra'
+Plug 'lifepillar/vim-solarized8'
+Plug 'sainnhe/sonokai'
+Plug 'liuchengxu/space-vim-dark'
+Plug 'jacoborus/tender.vim'
+Plug 'rakr/vim-two-firewatch'
+Plug 'andreasvc/vim-256noir'
+Plug 'challenger-deep-theme/vim'
+Plug 'mhinz/vim-janah'
+Plug 'srcery-colors/srcery-vim'
+Plug 'morhetz/gruvbox'
+Plug 'hardselius/warlock'
+Plug 'romainl/Apprentice'
+Plug 'caksoylar/vim-mysticaltutor'
+Plug 'vim-scripts/darkspectrum'
+Plug 'doums/darcula'
+Plug 'SergeiMinaev/calm-dark.vim'
+
 " Initialize plugin system
 call plug#end()
 
