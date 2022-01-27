@@ -24,6 +24,9 @@ Plug 'mhinz/vim-startify'
 
 Plug 'bling/vim-bufferline'
 
+" Default SCSS syntax doesn't support nested selectors
+Plug 'cakebaker/scss-syntax.vim'
+
 " Highlight color codes
 Plug 'ap/vim-css-color'
 
