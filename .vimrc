@@ -83,6 +83,10 @@ filetype on
 filetype plugin on
 autocmd BufRead *.py nmap <F9> :!python %<CR>
 autocmd BufRead,BufNewFile *.tpl set filetype=html
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+autocmd BufNewFile,BufRead *.js setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.py setlocal filetype=python
+autocmd BufNewFile,BufRead *.scss setlocal filetype=scss
 
 let b:showSpaces = 1
 set tabstop=2 shiftwidth=2
