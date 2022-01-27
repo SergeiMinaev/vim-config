@@ -2,10 +2,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Vue.js syntax
-Plug 'othree/javascript-libraries-syntax.vim'
-let g:used_javascript_libs = 'vue'
-
 Plug 'posva/vim-vue'
 let g:vue_pre_processors = ['scss', 'typescript']
 " Available pre-processors are: coffee, haml, handlebars, less, pug, sass, scss, slm, stylus, typescript
