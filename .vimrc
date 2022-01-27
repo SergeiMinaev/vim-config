@@ -58,6 +58,9 @@ set title titlestring=
 Plug 'vim-scripts/nginx.vim'
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
 
+Plug 'vim-python/python-syntax'
+let g:python_highlight_func_calls = 0
+
 " Colorschemes
 Plug 'tyrannicaltoucan/vim-deep-space'
 Plug 'altercation/vim-colors-solarized'
