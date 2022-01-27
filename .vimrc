@@ -2,6 +2,21 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
+Plug 'leafOfTree/vim-vue-plugin'
+let g:vim_vue_plugin_config = {
+      \'syntax': {
+      \   'template': ['html'],
+      \   'script': ['typescript'],
+      \   'style': ['css'],
+      \},
+      \'full_syntax': [],
+      \'initial_indent': [],
+      \'attribute': 0,
+      \'keyword': 0,
+      \'foldexpr': 0,
+      \'debug': 0,
+      \}
+
 " Awesome vim sessions ( https://github.com/mhinz/vim-startify )
 " Save new session - :SS <session-name> 
 " Save and close existing session - :SC
