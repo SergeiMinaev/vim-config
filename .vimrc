@@ -37,6 +37,11 @@ let g:ctrlp_working_path_mode = '0'
 set wildignore+=*/tmp*/,*/cache/*,*/CACHE/*,*/node_modules/*,*/venv/*,*/target/*,
 set wildignore+=*/static/*,*.git/*,*.log,*.jpg,*.jpeg,*.png,*.pdf,*.octet-stream,_*,
 set wildignore+=*/migrations/*,
+" Use ag (silver searcher) to index files. ag is super-fast - https://github.com/ggreer/the_silver_searcher
+if executable("ag")
+    " set grepprg=ag\ --nogroup\ --nocolor
+    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+endif
 
 " Vertical indent line
 Plug 'Yggdroot/indentLine'
