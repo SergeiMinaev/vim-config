@@ -2,8 +2,6 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-Plug 'jelera/vim-javascript-syntax'
-
 " Vue.js syntax
 Plug 'othree/javascript-libraries-syntax.vim'
 let g:used_javascript_libs = 'vue'
