@@ -77,7 +77,7 @@ set nofoldenable
 set cursorline
 set fileformat=unix
 set scrolloff=10
-set colorcolumn=79
+set colorcolumn=120
 syntax on
 filetype on
 filetype plugin on
