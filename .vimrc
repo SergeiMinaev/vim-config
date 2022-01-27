@@ -104,7 +104,7 @@ augroup MyColors
     autocmd!
     autocmd ColorScheme * call MyHighlights()
 augroup END
-colorscheme apprentice
+colorscheme calm-dark
 
 set nocompatible
 set foldcolumn=1
