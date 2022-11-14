@@ -21,6 +21,8 @@ let g:vim_vue_plugin_config = {
 " Save new session - :SS <session-name> 
 " Save and close existing session - :SC
 Plug 'mhinz/vim-startify'
+" autosave session before closing VIM (useful when using tmux sessions)
+let g:startify_session_persistence = 1
 
 Plug 'bling/vim-bufferline'
 
