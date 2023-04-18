@@ -123,6 +123,8 @@ autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
 autocmd BufNewFile,BufRead *.js setlocal filetype=javascript
 autocmd BufNewFile,BufRead *.py setlocal filetype=python
 autocmd BufNewFile,BufRead *.scss setlocal filetype=scss
+autocmd BufNewFile,BufRead *.lcss setlocal filetype=css
+autocmd BufNewFile,BufRead *.vue setlocal filetype=javascript
 
 let b:showSpaces = 1
 set tabstop=2 shiftwidth=2
