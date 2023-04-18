@@ -18,17 +18,11 @@ Plug 'cakebaker/scss-syntax.vim'
 Plug 'ap/vim-css-color'
 
 " Useful file opener (call it by Ctrl-p)
-Plug 'ctrlpvim/ctrlp.vim'
-" Don't index parent dir
-let g:ctrlp_working_path_mode = '0'
-set wildignore+=*/tmp*/,*/cache/*,*/CACHE/*,*/node_modules/*,*/venv/*,*/target/*,
-set wildignore+=*/static/*,*.git/*,*.log,*.jpg,*.jpeg,*.png,*.pdf,*.octet-stream,_*,
-set wildignore+=*/migrations/*,
-" Use ag (silver searcher) to index files. ag is super-fast - https://github.com/ggreer/the_silver_searcher
-if executable("ag")
-    " set grepprg=ag\ --nogroup\ --nocolor
-    let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
-endif
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" nmap <C-P> :GFiles<CR>
+nmap <C-P> :Files<CR>
+let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 
 " Vertical indent line
 Plug 'Yggdroot/indentLine'
@@ -44,6 +38,7 @@ set title titlestring=
 
 Plug 'vim-scripts/nginx.vim'
 au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
+
 
 " Plug 'vim-python/python-syntax'
 " let g:python_highlight_func_calls = 0
