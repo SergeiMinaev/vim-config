@@ -161,6 +161,9 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " fix backspace in ssh sessions
 :set backspace=indent,eol,start
 
+" Prettify XML. Select XML string, press `y`, then press F12.
+map <F12> :'<,'>!xmllint --format -
+
 " Handle commands in russian ЙЦУКЕН keyboard layout. Remove it if not needed.
 map Жцй :wq
 map Жц :w
