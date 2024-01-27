@@ -15,7 +15,7 @@ Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 ```
 git clone https://github.com/SergeiMinaev/vim-config.git ~/.vim
 ```
-3) Install vim plugin manager: ~/.vim/update-vim-plug.sh
+3) Install vim plugin manager: cd ~/.vim && ./update-vim-plug.sh
 4) Run vim and type :PlugInstall to install plugins.
    
 Done
