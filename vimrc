@@ -2,53 +2,45 @@
 " - Avoid using standard Vim directory names like 'plugin'
 call plug#begin('~/.vim/plugged')
 
-" Awesome vim sessions ( https://github.com/mhinz/vim-startify )
+" https://github.com/mhinz/vim-startify
+" Awesome vim sessions.
 " Save new session - :SS <session-name> 
 " Save and close existing session - :SC
 Plug 'mhinz/vim-startify'
 " autosave session before closing VIM (useful when using tmux sessions)
 let g:startify_session_persistence = 1
 
+" https://github.com/bling/vim-bufferline
+" Super simple vim plugin to show the list of buffers in the command bar.
 Plug 'bling/vim-bufferline'
 
-" Default SCSS syntax doesn't support nested selectors
-Plug 'cakebaker/scss-syntax.vim'
-
-" Highlight color codes
+" https://github.com/ap/vim-css-color
+" Highlight color codes.
 Plug 'ap/vim-css-color'
 
-" Useful file opener (call it by Ctrl-p)
+" https://github.com/junegunn/fzf.vim
+" Useful file opener (call it by Ctrl-p).
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " nmap <C-P> :GFiles<CR>
 nmap <C-P> :Files<CR>
 let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 
-" Vertical indent line
+" https://github.com/Yggdroot/indentLine
+" Displaying thin vertical lines at each indentation level for code indented with spaces.
 Plug 'Yggdroot/indentLine'
 let g:indentLine_enabled = 1
 
-" Zig lang syntax
+" https://github.com/ziglang/zig.vim
+" Zig lang syntax.
 Plug 'ziglang/zig.vim'
 let g:zig_fmt_autosave = 0
 
-" Auto-delete .swp files
+" https://github.com/gioele/vim-autoswap
+" Auto-delete .swp files.
 Plug 'gioele/vim-autoswap'
 set title titlestring=
 
-Plug 'vim-scripts/nginx.vim'
-au BufRead,BufNewFile /etc/nginx/*,/usr/local/nginx/conf/* if &ft == '' | setfiletype nginx | endif
-
-
-" Plug 'vim-python/python-syntax'
-" let g:python_highlight_func_calls = 0
-" some = {
-" }
-" instead of
-" some = {
-"         }
-let g:pyindent_open_paren = '0'
-let g:pyindent_nested_paren = '0'
 
 " Colorschemes
 Plug 'tyrannicaltoucan/vim-deep-space'
@@ -83,23 +75,12 @@ Plug 'vim-scripts/darkspectrum'
 Plug 'doums/darcula'
 Plug 'SergeiMinaev/calm-dark.vim'
 
+colorscheme calm-dark
+
 " Initialize plugin system
 call plug#end()
 
-function! MyHighlights() abort
-  " Colors of matching brackets in 'apprentice' colorscheme
-  " are too low. Make them more visible.
-  highlight MatchParen cterm=bold ctermfg=235 ctermbg=253
-endfunction
-
-augroup MyColors
-    autocmd!
-    autocmd ColorScheme * call MyHighlights()
-augroup END
-colorscheme calm-dark
-
 set nocompatible
-set foldcolumn=1
 set wrap
 set linebreak
 set t_Co=256
@@ -108,8 +89,15 @@ set background=dark
 set termguicolors
 set ruler
 set hlsearch
-set foldmethod=expr
 set nofoldenable
+"set foldmethod=indent
+set foldmethod=indent
+set foldlevel=1
+"set foldclose=all
+"set foldnestmax=1
+set foldcolumn=0
+"noremap za zA
+noremap fo zA
 set cursorline
 set fileformat=unix
 set scrolloff=10
@@ -119,12 +107,16 @@ filetype on
 filetype plugin on
 autocmd BufRead *.py nmap <F9> :!python %<CR>
 autocmd BufRead,BufNewFile *.tpl set filetype=html
-autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
-autocmd BufNewFile,BufRead *.js setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.ts setlocal filetype=minjs
+autocmd BufNewFile,BufRead *.js setlocal filetype=minjs
+autocmd BufNewFile,BufRead *.vue setlocal filetype=minjs
 autocmd BufNewFile,BufRead *.py setlocal filetype=python
-autocmd BufNewFile,BufRead *.scss setlocal filetype=scss
-autocmd BufNewFile,BufRead *.lcss setlocal filetype=css
-autocmd BufNewFile,BufRead *.vue setlocal filetype=javascript
+autocmd BufNewFile,BufRead *.css setlocal filetype=mincss
+autocmd BufNewFile,BufRead *.lcss setlocal filetype=mincss
+autocmd BufNewFile,BufRead *.scss setlocal filetype=mincss
+autocmd BufNewFile,BufRead *.rs setlocal filetype=minrust
+autocmd BufNewFile,BufRead *.vim setlocal filetype=vim
+
 
 let b:showSpaces = 1
 set tabstop=2 shiftwidth=2
@@ -136,7 +128,6 @@ autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
-let python_highlight_all = 1
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
 nmap ,t :tabnew .<CR>
@@ -164,7 +155,7 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " Prettify XML. Select XML string, press `y`, then press F12.
 map <F12> :'<,'>!xmllint --format -
 
-" Handle commands in russian ЙЦУКЕН keyboard layout. Remove it if not needed.
+" Handle commands in cyrillic ЙЦУКЕН keyboard layout. Remove it if not needed.
 map Жцй :wq
 map Жц :w
 map Жй :q
