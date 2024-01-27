@@ -9,6 +9,16 @@ Homepage: https://github.com/SergeiMinaev/vim-config
 
 Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 
+### Screenshots
+#### Python
+![Python](https://7ae36a0d-fce4-4083-ad3c-59d62d7eb69f.selstorage.ru/python-1.png "Python")
+
+#### Rust
+![Rust](https://7ae36a0d-fce4-4083-ad3c-59d62d7eb69f.selstorage.ru/rust-1.png "Rust")
+
+#### JavaScript
+![JavaScript](https://7ae36a0d-fce4-4083-ad3c-59d62d7eb69f.selstorage.ru/js-1.png "JavaScript")
+
 ## Fresh install
 1) Remove or backup existing ~/.vim and ~/.vimrc.
 2) Clone this vim config:
