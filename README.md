@@ -13,12 +13,14 @@ Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 1) Remove or backup existing ~/.vim and ~/.vimrc.
 2) Clone this vim config:
 ```
-git clone https://github.com/SergeiMinaev/vim-config.git ~/.vim
+git clone git@github.com:SergeiMinaev/vim-config.git ~/.vim
 ```
-3) Install vim plugin manager: cd ~/.vim && ./update-vim-plug.sh
-4) Run vim and type :PlugInstall to install plugins.
-   
-Done
+3) Install vim plugin manager:
+```
+cd ~/.vim && ./update-vim-plug.sh
+```
+4) Run vim, ignore the error about the color scheme and type `:PlugInstall` to install the plugins.
+5) Restart vim. Done.
 
 *Note that path to vimrc is ~/.vim/vimrc and not ~/.vimrc .*
 
