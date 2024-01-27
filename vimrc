@@ -75,11 +75,10 @@ Plug 'vim-scripts/darkspectrum'
 Plug 'doums/darcula'
 Plug 'SergeiMinaev/calm-dark.vim'
 
-colorscheme calm-dark
-
 " Initialize plugin system
 call plug#end()
 
+colorscheme calm-dark
 set nocompatible
 set wrap
 set linebreak
