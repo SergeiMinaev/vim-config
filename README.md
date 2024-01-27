@@ -7,20 +7,19 @@ Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 2) Install new vim config with these three commands:
 ```
 git clone https://github.com/SergeiMinaev/vim-config.git ~/.vim
-cd ~/.vim
-mv .vimrc ~/
 ```
 3) Install vim plugin manager: ~/.vim/update-vim-plug.sh
 4) Run vim and type :PlugInstall to install plugins.
 Done
 
+Note that path to vimrc is ~/.vim/vimrc and not ~/.vimrc .
 
 ## Updating
 ### Warning: your ~/.vim and ~/.vimrc will be overwritten)
 
 To update vim-config run:
 ```
-cd ~/.vim && git checkout . && git pull && mv -f .vimrc ~/
+cd ~/.vim && git checkout . && git pull
 ```
 or
 ```
