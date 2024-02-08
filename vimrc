@@ -118,14 +118,14 @@ autocmd BufNewFile,BufRead *.vim setlocal filetype=vim
 
 
 let b:showSpaces = 1
-set tabstop=2 shiftwidth=2
+set tabstop=4 shiftwidth=4
 set expandtab
 set smarttab
 set softtabstop=2
 set autoindent
-autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
-autocmd FileType python setlocal shiftwidth=4 tabstop=4
+"autocmd FileType javascript setlocal shiftwidth=4 tabstop=4
+"autocmd FileType html setlocal shiftwidth=4 tabstop=4
+"autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 autocmd BufWritePre *.py normal m`:%s/\s\+$//e ``
 autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class
