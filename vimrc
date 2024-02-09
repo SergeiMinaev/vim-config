@@ -225,3 +225,8 @@ map Т N
 map Ь M
 map Б <
 map Ю >
+
+" Per-project vimrc support.
+if filereadable(".vimrc")
+    source .vimrc
+endif
