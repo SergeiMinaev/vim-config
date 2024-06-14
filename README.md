@@ -23,7 +23,7 @@ Used plugin manager: vim-plug ( https://github.com/junegunn/vim-plug )
 1) Remove or backup existing ~/.vim and ~/.vimrc.
 2) Clone this vim config:
 ```
-git clone git@github.com:SergeiMinaev/vim-config.git ~/.vim
+git clone https://github.com/SergeiMinaev/vim-config.git ~/.vim
 ```
 3) Install vim plugin manager:
 ```
