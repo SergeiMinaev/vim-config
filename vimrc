@@ -154,6 +154,8 @@ nnoremap <buffer> <F9> :exec '!python' shellescape(@%, 1)<cr>
 " Prettify XML. Select XML string, press `y`, then press F12.
 map <F12> :'<,'>!xmllint --format -
 
+command! DeleteTrailingSpaces %s/\s\+$//e
+
 " Handle commands in cyrillic ЙЦУКЕН keyboard layout. Remove it if not needed.
 map Жцй :wq
 map Жц :w
