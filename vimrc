@@ -232,3 +232,5 @@ map Ю >
 if filereadable(".vimrc")
     source .vimrc
 endif
+
+set viminfofile=~/.viminfo
