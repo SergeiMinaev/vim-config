@@ -156,6 +156,12 @@ map <F12> :'<,'>!xmllint --format -
 
 command! DeleteTrailingSpaces %s/\s\+$//e
 
+" Keep swap files out of project directories (XDG cache)
+if !isdirectory($HOME . '/.cache/vim/swap')
+    call mkdir($HOME . '/.cache/vim/swap', 'p')
+endif
+set directory=$HOME/.cache/vim/swap//
+
 " Handle commands in cyrillic ЙЦУКЕН keyboard layout. Remove it if not needed.
 map Жцй :wq
 map Жц :w
